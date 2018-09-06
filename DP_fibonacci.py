@@ -1,4 +1,4 @@
-# Recursive fibonacci - call stack - time complexity : O(2^n)
+# Recursive fibonacci - use call stack - time complexity : O(2^n)
 def fib_recursive(n):
   if n <= 1:
     return n
@@ -14,7 +14,7 @@ def fib_memoize(n, cache = {}):
     return cache[n]
 
 
-# Bottom Up - Time complexity O(n) - Space complexity O(1)
+# Bottom Up fibonacci - Time complexity O(n) - Space complexity O(1)
 def fibo_bottomUp(n):
   if n <= 1:
     return n
