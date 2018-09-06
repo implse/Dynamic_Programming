@@ -1,4 +1,4 @@
-# Recursive fibonacci - use call stack - time complexity : O(2^n)
+# Recursive fibonacci - use call stack - Time complexity : O(2^n)
 def fib_recursive(n):
   if n <= 1:
     return n
