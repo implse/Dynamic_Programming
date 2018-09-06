@@ -44,3 +44,7 @@ It is used for storing the results of expensive function calls and returning the
 Going bottom-up is a way to avoid recursion, saving the memory cost that recursion incurs when it builds up the call stack.
 
 Put simply, a bottom-up algorithm "starts from the beginning," while a recursive algorithm often "starts from the end and works backwards."
+
+Start with the smallest solutions, the smallest subproblems and the build up each solution until we arrive at the solution to the larger subproblem.
+
+A benefit to the bottom up approach is that we can save space since we are working our way up. We only need to really memoize the last 2 values, which means we can achieve constant space O(1).
