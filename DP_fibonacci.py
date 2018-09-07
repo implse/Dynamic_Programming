@@ -5,7 +5,7 @@ def fib_recursive(n):
   return fib_recursive(n-1)+ fib_recursive(n-2)
 
 
-# Memoize Recursive fibonacci - Time complexity O(n) - Space complexity O(n)
+# Top-Down Memoize Recursive fibonacci - Time complexity O(n) - Space complexity O(n)
 def fib_memoize(n, cache = {}):
     if n <= 1:
         return n
@@ -14,7 +14,7 @@ def fib_memoize(n, cache = {}):
     return cache[n]
 
 
-# Bottom Up fibonacci - Time complexity O(n) - Space complexity O(1)
+# Bottom-Up Iterative fibonacci - Time complexity O(n) - Space complexity O(1)
 def fibo_bottomUp(n):
   if n <= 1:
     return n

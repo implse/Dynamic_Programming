@@ -52,4 +52,4 @@ A benefit to the bottom up approach is that we can save space since we are worki
 #### Top Down Approach (Recursion)
 
 A top-down solution starts with the
-final result and recursively breaks it down into subproblems
+final result and recursively breaks it down into subproblems.
