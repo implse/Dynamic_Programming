@@ -55,5 +55,33 @@ Top Down approach start from the top (the desired
 result) and recursively break the solution into smaller pieces that you compute individually and
 piece back together. As you solve the problem recursively, you memoize the results of each
 subproblem so that you never have to recompute them. This is often the easier solution to
-understand because it is only a small step from a basic recursive solution to a topdown
+understand because it is only a small step from a basic recursive solution to a top down
 solution.
+
+### Solving Problem Using DP
+
+We can solve a problem using DP if it has:
+
+- Optimal Substructure.
+
+- Overlapping subproblems.
+
+then find Brute force solution. (draw recursive Tree)
+
+#### Common patterns to Identify dynamic problems
+
+- Maximization
+
+- Minimization
+
+- Optimization
+
+- Counting
+
+### Dynamic Programming vs Greedy Algorithms
+
+A lot of confusion between the two, even some overlap.
+
+Greedy algorithms consider only local optimizations.
+
+Dynamic programming consider every option and solve the all sub problems and then select one that would lead to an optimal solution.
