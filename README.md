@@ -55,7 +55,7 @@ Top Down approach start from the top (the desired
 result) and recursively break the solution into smaller pieces that you compute individually and
 piece back together.
 
-As you solve the problem recursively, you memoize the results of each subproblem so that you never have to recompute them. 
+As you solve the problem recursively, you memoize the results of each subproblem so that you never have to recompute them.
 
 This is often the easier solution to understand because it is only a small step from a basic recursive solution to a top down
 solution.
@@ -87,3 +87,20 @@ A lot of confusion between the two, even some overlap.
 Greedy algorithms consider only local optimizations.
 
 Dynamic programming consider every option and solve the all sub problems and then select one that would lead to an optimal solution.
+
+
+### F.A.S.T Strategy
+
+Generalized approach to solving any dynamic programming problem.
+
+Takes brute force solution and optimizes it.
+
+Four steps in the FAST method:
+
+1 - Find solution.
+
+2 - Analyze the first solution.
+
+3 - Identify the Subproblems.
+
+4 - Turn the solution around.
