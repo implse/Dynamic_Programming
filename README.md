@@ -99,8 +99,17 @@ Four steps in the FAST method:
 
 1 - Find solution.
 
-2 - Analyze the first solution.
+2 - Analyze the first solution.(Brute Force)
 
 3 - Identify the Subproblems.
 
 4 - Turn the solution around.
+
+
+#### Analyze the brute force solutions
+
+Estimate Time Complexity based on the number of recursive calls.
+
+Time Complexity is O(2^n) 
+
+Space Complexity is O(n)
