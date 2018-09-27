@@ -1,4 +1,6 @@
-# Given an integer representing a specific amount of change and a set of coin sizes, determine the minimum number of coins required to make that amount of change. You may assume there is always a 1 cent coin.
+# Given an integer representing a specific amount of change and a set of coin sizes,
+# determine the minimum number of coins required to make that amount of change. 
+# You may assume there is always a 1 cent coin.
 
 # coins = (1, 5, 10, 25)
 # change(1) = 1 (1)
@@ -11,7 +13,7 @@
 
 # Each recursive step, we will try each coin possibility that is less than the remaining total.
 
-# Substract the coin value from the total remaining until the remaining coin value is 0
+# Substract the coin value from the total remaining until the remaining coin value is 0.
 
 
 import math
