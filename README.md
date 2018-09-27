@@ -1,12 +1,14 @@
 # Dynamic Programming
 
 
-> THOSE WHO CANNOT REMEMER THE PAST ARE CONDEMNED TO REPEAT IT.
+> Those who cannot remember the past are condemned to repeat it.
 >
 > Dynamic Programming
 
 
 Dynamic programming is a method for solving problems by breaking them down into a collection of simple subproblems, solving each of those subproblems just once, and storing their solutions. This saves computation time.
+
+Used to solve problems in O(n^2) or O(n^3) for which a naive approach would take exponential time.
 
 __Dynamic Programming -> Dynamic Optimization.__
 
@@ -64,9 +66,9 @@ solution.
 
 We can solve a problem using DP if it has:
 
-- Optimal Substructure.
+- Optimal Substructure : An optimal solution to a problem contains optimal solutions to subproblems.
 
-- Overlapping subproblems.
+- Overlapping subproblems : A recursive solution contains a small number of distinct subproblems repeated many times.
 
 then find Brute force solution. (draw recursive Tree)
 
@@ -110,6 +112,6 @@ Four steps in the FAST method:
 
 Estimate Time Complexity based on the number of recursive calls.
 
-Time Complexity is O(2^n) 
+Time Complexity is O(2^n)
 
 Space Complexity is O(n)

@@ -1,5 +1,5 @@
 # Given an integer representing a specific amount of change and a set of coin sizes,
-# determine the minimum number of coins required to make that amount of change. 
+# determine the minimum number of coins required to make that amount of change.
 # You may assume there is always a 1 cent coin.
 
 # coins = (1, 5, 10, 25)
@@ -58,8 +58,6 @@ def makeChange(amount, coins):
           minCoins = min(minCoins, memo[i - coin])
       memo[i] = minCoins + 1
   return memo[amount]
-
-
 
 # Test
 coins = [1, 5, 10, 25]
