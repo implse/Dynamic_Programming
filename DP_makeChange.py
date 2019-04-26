@@ -15,49 +15,19 @@
 
 # Substract the coin value from the total remaining until the remaining coin value is 0.
 
-
-import math
-
 # Brute Force Recursive
 def makeChange(amount, coins):
-  if(amount == 0):
+  if amount == 0:
     return 0
-  minCoins = math.inf
+  minCoins = float("inf")
 
   for coin in coins:
-    if (amount - coin >= 0):
+    if amount - coin >= 0:
       currMin = makeChange(amount - coin, coins)
       minCoins = min(currMin, minCoins)
   return minCoins + 1
 
-# DP Memoize Top-Down
-def makeChange(amount, coins):
-  memo = [0]*(amount + 1)
 
-  def change(amount, coins, memo):
-    if memo[amount] == 0:
-      if(amount == 0):
-        return 0
-      minCoins = math.inf
-      for coin in coins:
-        if (amount - coin >= 0):
-          currMin = makeChange(amount - coin, coins)
-          minCoins = min(currMin, minCoins)
-      memo[amount] = minCoins + 1
-    return memo[amount]
-
-  return change(amount, coins, memo)
-
-# DP Memoize Bottom-Up
-def makeChange(amount, coins):
-  memo = [0]*(amount + 1)
-  for i in range(1, amount + 1):
-      minCoins = math.inf
-      for coin in coins:
-        if i - coin >= 0:
-          minCoins = min(minCoins, memo[i - coin])
-      memo[i] = minCoins + 1
-  return memo[amount]
 
 # Test
 coins = [1, 5, 10, 25]
