@@ -7,12 +7,9 @@
 # change(6) = 2 (5 + 1)
 # change(47) = 5 (25 + 10 + 10 + 1 + 1)
 
-# Brute Force:
-
+# Brute Force Approach:
 # Recursively try every possible combination to find the smallest.
-
 # Each recursive step, we will try each coin possibility that is less than the remaining total.
-
 # Substract the coin value from the total remaining until the remaining coin value is 0.
 
 # Brute Force Recursive
@@ -42,6 +39,17 @@ def makeChange_helper(amount, coins, memo):
           minCoins = min(currMin, minCoins)
       memo[amount] = minCoins + 1
     return memo[amount]
+
+# DP Memoize Bottom-Up
+def makeChange(amount, coins):
+  memo = [0 for _ in range(amount + 1)]
+  for i in range(1, amount + 1):
+      minCoins = float("inf")
+      for coin in coins:
+        if i - coin >= 0:
+          minCoins = min(minCoins, memo[i - coin])
+      memo[i] = minCoins + 1
+  return memo[amount]
 
 # Test
 coins = [1, 5, 10, 25]
