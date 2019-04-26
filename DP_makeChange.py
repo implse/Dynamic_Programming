@@ -20,14 +20,28 @@ def makeChange(amount, coins):
   if amount == 0:
     return 0
   minCoins = float("inf")
-
   for coin in coins:
     if amount - coin >= 0:
       currMin = makeChange(amount - coin, coins)
       minCoins = min(currMin, minCoins)
   return minCoins + 1
 
+# DP Memoize Top-Down
+def makeChange(amount, coins):
+  memo = [0 for _ in range(amount + 1)]
+  return makeChange_helper(amount, coins, memo)
 
+def makeChange_helper(amount, coins, memo):
+    if memo[amount] == 0:
+      if amount == 0:
+        return 0
+      minCoins = float("inf")
+      for coin in coins:
+        if amount - coin >= 0:
+          currMin = makeChange(amount - coin, coins)
+          minCoins = min(currMin, minCoins)
+      memo[amount] = minCoins + 1
+    return memo[amount]
 
 # Test
 coins = [1, 5, 10, 25]
