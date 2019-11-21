@@ -1,11 +1,14 @@
-# Recursive fibonacci - use call stack - Time complexity : O(2^n)
+# Recursive fibonacci - use call stack - Time Complexity : O(2^n)
+calculation = 0
 def fib_recursive(n):
-  if n <= 1:
-    return n
-  return fib_recursive(n-1)+ fib_recursive(n-2)
+    global calculation
+    calculation += 1
+    if n <= 1:
+        return n
+    return fib_recursive(n-1)+ fib_recursive(n-2)
 
 
-# Top-Down Memoize Recursive fibonacci - Time complexity O(n) - Space complexity O(n)
+# Top-Down Memoize Recursive fibonacci - Time Complexity O(n) - Space Complexity O(n)
 def fib_memoize(n, cache = {}):
     if n <= 1:
         return n
@@ -14,7 +17,7 @@ def fib_memoize(n, cache = {}):
     return cache[n]
 
 
-# Bottom-Up Iterative fibonacci - Time complexity O(n) - Space complexity O(1)
+# Bottom-Up Iterative fibonacci - Time Complexity O(n) - Space Complexity O(1)
 def fibo_bottomUp(n):
   if n <= 1:
     return n
@@ -24,3 +27,11 @@ def fibo_bottomUp(n):
     result = f_minus_two + f_minus_one
     f_minus_two, f_minus_one = f_minus_one, result
   return f_minus_one
+
+def fibo_bottomUp(n):
+    if n < 2:
+        return n
+    answer = [0, 1]
+    for i in range(2, n):
+        answer.append(aswer[i - 1] + answer[i - 2])
+    return answer.pop()

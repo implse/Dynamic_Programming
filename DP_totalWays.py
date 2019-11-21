@@ -1,4 +1,5 @@
-# Given a square matrix the size N find the numbers of possible ways to reach a cell in a matrix starting from (0, 0)
+# Given a square matrix the size N find the numbers of possible ways to reach a cell in a matrix starting from (0, 0).
+
 # going down and going left are the only possible way to go.
 
 def totalWays(n, end_position):
