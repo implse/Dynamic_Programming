@@ -1,8 +1,19 @@
 # https://codereview.stackexchange.com/questions/20569/dynamic-programming-knapsack-solution
 
+# Solve the knapsack problem by finding the most valuable subsequence
+# of items that weighs no more than maxweight.
+#
+# items must be a sequence of pairs (value, weight), where value is a
+# number and weight is a non-negative integer.
+#
+# maxweight is a non-negative integer.
+#
+# Return a pair whose first element is the sum of values in the most
+# valuable subsequence, and whose second element is the subsequence.
 
+# DP : Bottom up Solution
 def knapsack(items, maxweight):
-    bestvalues = [[0] * (maxweight + 1) for i in range(len(items) + 1)]
+    bestvalues = [[0] * (maxweight + 1) for _ in range(len(items) + 1)]
     for i, (value, weight) in enumerate(items):
         i += 1
         for capacity in range(maxweight + 1):
@@ -19,11 +30,10 @@ def knapsack(items, maxweight):
 
 def reconstruction(bestvalues, i, j):
     reconstruction = []
-    while i > 0:
+    for i in reversed(range(1, i + 1)):
         if bestvalues[i][j] != bestvalues[i - 1][j]:
             reconstruction.append(items[i - 1])
             j -= items[i - 1][1]
-        i -= 1
     reconstruction.reverse()
     return reconstruction
 
