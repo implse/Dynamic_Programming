@@ -1,3 +1,6 @@
+# The Fibonacci numbers are the numbers in the following integer sequence.
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,
+
 # Recursive fibonacci - use call stack - Time Complexity : O(2^n)
 calculation = 0
 def fib_recursive(n):
@@ -5,7 +8,7 @@ def fib_recursive(n):
     calculation += 1
     if n <= 1:
         return n
-    return fib_recursive(n-1)+ fib_recursive(n-2)
+    return fib_recursive(n-1) + fib_recursive(n-2)
 
 
 # Top-Down Memoize Recursive fibonacci - Time Complexity O(n) - Space Complexity O(n)
@@ -13,7 +16,7 @@ def fib_memoize(n, cache = {}):
     if n <= 1:
         return n
     elif n not in cache:
-        cache[n] =  fib_memoize(n-1) + fib_memoize(n-2)
+        cache[n] =  fib_memoize(n - 1) + fib_memoize(n - 2)
     return cache[n]
 
 

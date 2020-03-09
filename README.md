@@ -43,7 +43,9 @@ It is used for storing the results of expensive function calls and returning the
 
 #### Bottom Up Approach (Iteration)
 
-Going Bottom Up is a way to avoid recursion, saving the memory cost that recursion incurs when it builds up the call stack.
+A bottom-up or Tabulation method to which uses a matrix to store subproblems.
+
+Going Bottom-up is a way to avoid recursion, saving the memory cost that recursion incurs when it builds up the call stack.
 
 Put simply, a bottom-up algorithm "starts from the beginning," while a recursive algorithm often "starts from the end and works backwards."
 
@@ -112,6 +114,6 @@ Four steps in the FAST method:
 
 Estimate Time Complexity based on the number of recursive calls.
 
-Time Complexity is O(2^n)
+Time Complexity is `O(2^n)`
 
-Space Complexity is O(n)
+Space Complexity is `O(n)`
