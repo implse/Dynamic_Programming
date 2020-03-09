@@ -8,13 +8,13 @@
 
 Dynamic programming is a method for solving problems by breaking them down into a collection of simple subproblems, solving each of those subproblems just once, and storing their solutions. This saves computation time.
 
-Used to solve problems in O(n^2) or O(n^3) for which a naive approach would take exponential time.
+Used to solve problems in `O(n^2)` or `O(n^3)` for which a naive approach would take exponential time.
 
 __Dynamic Programming -> Dynamic Optimization.__
 
 __Dynamic Programming -> Recursion + Memoization.__
 
-#### 7 Steps to solve a Dynamic Programming problem :
+### 7 Steps to solve a Dynamic Programming problem :
 
   1 - Recognize a DP problem.
 
