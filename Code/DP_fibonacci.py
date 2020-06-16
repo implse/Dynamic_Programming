@@ -36,5 +36,5 @@ def fibo_bottomUp(n):
         return n
     answer = [0, 1]
     for i in range(2, n):
-        answer.append(aswer[i - 1] + answer[i - 2])
+        answer.append(asnwer[i - 1] + answer[i - 2])
     return answer.pop()
