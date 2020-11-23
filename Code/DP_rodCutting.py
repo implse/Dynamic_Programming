@@ -1,6 +1,8 @@
 # Given a rod of length n and an array of prices that contains prices of all pieces of size smaller than n.
 # Determine how to cut the rod in order to maximize the profit.
 
+
+# Time Complexity : O(n^2) / Space Complexity : O(n*p)
 def rodCutting(rod_length, prices):
     ln = len(prices)
     dp_table = [[0] * (rod_length + 1) for x in range(ln)]
