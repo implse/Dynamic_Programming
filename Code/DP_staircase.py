@@ -29,3 +29,19 @@ def countWays(n) :
     for i in range(3, n + 1) :
         memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3]
     return memo[n]
+
+
+# A child is running up a staircase with n steps and can hop k steps at a time.
+# Implement a method to count how many possible ways the child can run up the stairs.
+
+def countWays(n, steps):
+    if n < 0:
+        return 0
+    if n == 0:
+        return 1
+    result = 0
+    for i in range(1, steps + 1):
+        result += countWays(n - i, steps)
+    return result
+
+print(countWays(4, 3))
