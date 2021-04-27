@@ -7,6 +7,8 @@ grid = [
     [4, 2, 1]
 ]
 
+
+# Dynamic Programming Solution
 from copy import deepcopy
 
 def minimum_path_sum(grid):
