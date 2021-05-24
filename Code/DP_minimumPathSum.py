@@ -28,3 +28,17 @@ def minimum_path_sum(grid):
     return dp[-1][-1]
 
 print(minimum_path_sum(grid))
+
+
+# Recursive Solution
+def minimum_cost_recursive(grid, row, col):
+  # End condition
+  if row == len(grid) - 1 and col == len(grid[0]) - 1:
+    return grid[row][col]
+  # Outbound condition
+  elif row >= len(grid) - 1 or col >= len(grid[0]) - 1:
+    return float('inf')
+  else:
+    return grid[row][col] + min(minimum_cost_recursive(grid, row + 1, col), minimum_cost_recursive(grid, row, col + 1), minimum_cost_recursive(grid, row + 1, col + 1))
+
+print(minimum_cost_recursive(grid, 0, 0))
